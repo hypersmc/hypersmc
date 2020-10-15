@@ -1,16 +1,39 @@
-### Hi there 👋
+```java
+package me.hypersmc.About;
 
-<!--
-**hypersmc/hypersmc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+import me.hypersmc.about.Me;
 
-Here are some ideas to get you started:
+public class About extends Me
+{
+    public static void getWork()
+    {
+        try {
+          if (Me.getJobs() > 0){
+            System.out.println("Currently nothing");
+          }
+        } catch (Exception e) {
+          System.out.println("There was an error trying to fetch jobs. Please try again later.");
+          System.out.println("");
+          System.out.println("Error code: " + e);
+        }
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    public static void getDailyKnowledge()
+    {
+        try {
+          if (Me.getKnowledge() > 7 ){
+            System.out.println("I currently know Java, JS, PhP, Laravel, C++, C#, Golang");
+          }
+        } catch (Exception e){
+          System.out.println("There was an error trying to fetch knowledge. Please try again later.");
+          System.out.println("");
+          System.out.println("Error code: " + e);
+        }
+    }
+
+    public function getFutureGoal()
+    {
+        return 'To contribute to open source.';
+    }
+}
+```
