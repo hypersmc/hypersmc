@@ -31,7 +31,7 @@ public class About extends Me
         }
     }
 
-    public function getFutureGoal()
+    public string getFutureGoal()
     {
         return 'To contribute to open source.';
     }
